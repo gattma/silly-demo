@@ -13,6 +13,7 @@ RUN apk update \
 
 WORKDIR /app
 COPY --from=build-env /silly-demo .
+COPY index.html .
 
 EXPOSE 8080
 CMD [ "./silly-demo" ]
